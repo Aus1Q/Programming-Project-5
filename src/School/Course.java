@@ -18,8 +18,14 @@ public class Course {
     }
     
     public void roll(){
-        System.out.println(studentList.toString());
+        
     }
+
+    public String getCourseName() {
+        return courseName;
+    }
+
+    
     
 
 }

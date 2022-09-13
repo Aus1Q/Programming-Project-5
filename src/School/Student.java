@@ -14,15 +14,6 @@ public class Student {
         this.ID = ID;
         this.name = name;
     }
-                     
-    public void addGrade(){
-        double grade;
-        System.out.println("Enter grade to be Added to this Student: ");
-        Scanner in = new Scanner(System.in);
-        grade = in.nextDouble();
-        grades.add(grade);
-   
-    }
 
     public String getName() {
         return name;
