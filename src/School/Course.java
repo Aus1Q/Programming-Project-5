@@ -1,4 +1,3 @@
-
 package School;
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -10,6 +9,7 @@ public class Course {
     
     public Course(String courseName){
         this.courseName = courseName;
+        studentList = new ArrayList<>();
     }
     
     public void addStudent(Student stud){
@@ -17,15 +17,26 @@ public class Course {
         studentList.add(stud);
     }
     
-    public void roll(){
-        
+    public double average(){
+        double total = 0;
+        for(Student studentList : studentList){
+            total+=studentList.getAverageTestScores();
+        }
+        return total/studentList.size();
     }
-
+    
+    public void roll(){
+        System.out.println("Course: " + this.courseName);
+        System.out.println("Students: ");
+        
+        for(Student studentList : this.studentList){
+            System.out.println(studentList);
+        }
+    }
     public String getCourseName() {
         return courseName;
     }
 
     
-    
-
-}
+   
+   }
